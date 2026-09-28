@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SolarShare | Login</title><link rel="icon" href="img/logo.svg"><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<div class="auth">
+    <img class="scene" src="img/scene.svg" alt="">
+    <div class="brand">
+        <div class="lg"><img src="img/logo.svg" alt="SolarShare logo"><h1>SolarShare</h1></div>
+        <p class="sub2">Community Rooftop Solar Usage Tracker</p>
+        <p class="tag">Clean Energy. Shared Benefits.<br>A Brighter Tomorrow.</p>
+    </div>
+    <div class="panel"><div class="box">
+        <h2>Welcome Back</h2><p class="lead">Login to your SolarShare account</p>
+        <form id="formIn" novalidate>
+            <div class="fld"><i>✉️</i><input id="inEmail" type="email" placeholder="Email address" aria-label="Email address" autocomplete="username"></div>
+            <div class="fld"><i>🔒</i><input id="inPass" type="password" placeholder="Password" aria-label="Password" autocomplete="current-password"><button type="button" class="eye" aria-label="Show password">👁</button></div>
+            <div class="chk"><label><input type="checkbox" id="remember" checked> Remember me</label></div>
+            <div class="err" id="errIn" role="alert"></div>
+            <button class="btn full" type="submit">Login</button>
+        </form>
+        <p class="swap">Don't have an account? <a href="signup.html">Create account</a></p>
+    </div></div>
+</div>
+<div id="toast" role="status"></div>
+<script src="js/app.js"></script><script src="js/login.js"></script>
+</body></html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SolarShare | Records</title><link rel="icon" href="img/logo.svg"><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header class="topbar" id="topbar"></header>
+<main>
+    <div id="households" class="view on"><div class="grid">
+        <div class="card"><h3>Add installation</h3><p class="hint">The shared rooftop solar system.</p>
+            <label for="iName">Name</label><input id="iName" placeholder="Block A">
+            <label for="iLoc">Location</label><input id="iLoc" placeholder="Chennai">
+            <label for="iCap">Capacity (kW)</label><input id="iCap" type="number" step="0.01" placeholder="50">
+            <button class="btn" onclick="addInstallation()">Save installation</button>
+            <table><thead><tr><th>ID</th><th>Name</th><th>Location</th><th>kW</th></tr></thead><tbody id="instRows"></tbody></table></div>
+        <div class="card"><h3>Add household</h3><p class="hint">Ratios of all households must total 1.0 or less.</p>
+            <label for="hInst">Installation</label><select id="hInst"></select>
+            <label for="hName">Household name</label><input id="hName" placeholder="Flat 101">
+            <label for="hOwner">Owner</label><input id="hOwner" placeholder="Ravi">
+            <label for="hRatio">Allocation ratio (0 to 1)</label><input id="hRatio" type="number" step="0.01" placeholder="0.4">
+            <button class="btn" onclick="addHousehold()">Save household</button>
+            <table><thead><tr><th>ID</th><th>Name</th><th>Owner</th><th>Ratio</th></tr></thead><tbody id="houseRows"></tbody></table></div>
+    </div></div>
+    <div id="generation" class="view"><div class="card" style="max-width:560px"><h3>Log solar generation</h3><p class="hint">One entry per installation per day.</p>
+        <label for="gInst">Installation</label><select id="gInst"></select>
+        <label for="gDate">Date</label><input id="gDate" type="date">
+        <label for="gUnits">Total units generated (kWh)</label><input id="gUnits" type="number" step="0.01" placeholder="100">
+        <button class="btn" onclick="addGeneration()">Save generation</button>
+        <table><thead><tr><th>Date</th><th>Units</th></tr></thead><tbody id="genRows"></tbody></table></div></div>
+    <div id="consumption" class="view"><div class="card" style="max-width:560px"><h3>Log household consumption</h3><p class="hint">Generation for that date must be logged first.</p>
+        <label for="cHouse">Household</label><select id="cHouse"></select>
+        <label for="cDate">Date</label><input id="cDate" type="date">
+        <label for="cUnits">Units consumed (kWh)</label><input id="cUnits" type="number" step="0.01" placeholder="30">
+        <button class="btn" onclick="addConsumption()">Save consumption</button>
+        <div id="consOut"><p class="empty">Your share and exported units appear here after saving.</p></div></div></div>
+</main>
+<div id="toast" role="status"></div>
+<script src="js/app.js"></script><script src="js/records.js"></script>
+</body></html>

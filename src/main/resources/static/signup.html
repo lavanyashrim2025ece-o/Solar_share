@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SolarShare | Sign up</title><link rel="icon" href="img/logo.svg"><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<div class="auth">
+    <img class="scene" src="img/scene.svg" alt="">
+    <div class="brand">
+        <div class="lg"><img src="img/logo.svg" alt="SolarShare logo"><h1>SolarShare</h1></div>
+        <p class="sub2">Community Rooftop Solar Usage Tracker</p>
+        <ul class="pts">
+            <li><i>🌿</i>Share clean energy<br>with your community</li>
+            <li><i>🏠</i>Track your solar generation<br>and usage</li>
+            <li><i>🌱</i>Build a sustainable<br>future together</li>
+        </ul>
+    </div>
+    <div class="panel"><div class="box">
+        <h2>Create Your Account</h2><p class="lead">Join SolarShare and start tracking your solar usage</p>
+        <form id="formUp" novalidate>
+            <div class="fld"><i>👤</i><input id="upName" placeholder="Full Name" aria-label="Full name" autocomplete="name"></div>
+            <div class="fld"><i>✉️</i><input id="upEmail" type="email" placeholder="Email Address" aria-label="Email address" autocomplete="email"></div>
+            <div class="fld"><i>🏠</i><input id="upHid" inputmode="numeric" placeholder="Household ID (number from your admin, e.g. 1)" aria-label="Household ID"></div>
+            <div class="fld"><i>🔒</i><input id="upPass" type="password" placeholder="Password (8+ chars, letters and a number)" aria-label="Password" autocomplete="new-password"><button type="button" class="eye" aria-label="Show password">👁</button></div>
+            <div class="fld"><i>🔒</i><input id="upPass2" type="password" placeholder="Confirm Password" aria-label="Confirm password" autocomplete="new-password"><button type="button" class="eye" aria-label="Show password">👁</button></div>
+            <div class="fld"><i>%</i><input id="upRatio" type="number" step="0.01" placeholder="Allocation Ratio (e.g. 0.4)" aria-label="Allocation ratio"></div>
+            <div class="err" id="errUp" role="alert"></div>
+            <button class="btn full" type="submit">Create Account</button>
+        </form>
+        <p class="swap">Already have an account? <a href="index.html">Login</a></p>
+    </div></div>
+</div>
+<div id="toast" role="status"></div>
+<script src="js/app.js"></script><script src="js/signup.js"></script>
+</body></html>

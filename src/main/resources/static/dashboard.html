@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SolarShare | Dashboard</title><link rel="icon" href="img/logo.svg"><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header class="topbar" id="topbar"></header>
+<main>
+    <div class="card welcome">
+        <div class="lf">🌿</div>
+        <div><h2 id="hello">Welcome back!</h2><p>Here's your household's solar usage summary.</p></div>
+        <div class="dt" id="today"></div>
+    </div>
+    <div class="note" id="note" hidden>We couldn't find your household. Add it under <a href="records.html#households">Households</a>, or correct your Household ID in <a href="profile.html">Profile</a>.</div>
+    <div class="kpis">
+        <div class="card kpi"><div class="ic k1">☀️</div><div><small>Today's Solar Generation</small><b id="kGen">-</b> <em>kWh</em></div></div>
+        <div class="card kpi"><div class="ic k2">🏠</div><div><small>Your Allocated Share (today)</small><b id="kShare">-</b> <em>kWh</em><span id="kRatio"></span></div></div>
+        <div class="card kpi"><div class="ic k3">⚡</div><div><small>Your Consumption (month)</small><b id="kCons">-</b> <em>kWh</em></div></div>
+        <div class="card kpi"><div class="ic k4">🔌</div><div><small>Grid Export (month)</small><b id="kExp">-</b> <em>kWh</em></div></div>
+    </div>
+    <div class="cols">
+        <div class="card"><h3>Daily Solar Generation (kWh)</h3><div id="chart"><p class="empty">No generation logged yet. Add some under Generation.</p></div></div>
+        <div class="card"><h3>Household Net Usage (this month)</h3>
+            <div class="rows" id="net"><p class="empty">No data yet.</p></div></div>
+    </div>
+    <div class="card"><h3>Recent Activity</h3>
+        <div id="act"><p class="empty">Activity will appear here once you log data.</p></div></div>
+</main>
+<div id="toast" role="status"></div>
+<script src="js/app.js"></script><script src="js/dashboard.js"></script>
+</body></html>
